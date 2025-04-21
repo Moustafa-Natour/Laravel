@@ -19,8 +19,8 @@ export const evBranches: Branch[] = [
             "https://www.google.com/maps/dir/?api=1&destination=Dbayeh+EV+Charging+Station",
     },
     {
-        id: "jounieh",
-        name: "Jounieh EV Charging Station",
+        id: "sahel-alma",
+        name: "Sahel Aalma EV Charging Station",
         description: "Offers scenic views and rapid EV charging service.",
         image: "/images/EvBranch/jounieh.png",
         mapsLink:
