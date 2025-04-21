@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel React App</title>
+    <title>Laravel With React</title>
 
     <script>
         console.log("Loading Laravel React App");
