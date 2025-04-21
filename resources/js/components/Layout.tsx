@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"; // Ensure the correct import of Navbar
+import Footer from "./Footer"; // Ensure the correct import of Navbar
 import StationsList from "./StationsList"; // Import StationsList component
 import SolarList from "./SolarList"; // Import SolarList component
 
@@ -52,6 +53,7 @@ const Layout = () => {
                 {/* Render the active component */}
                 {renderActiveComponent()}
             </main>
+            <Footer />
         </>
     );
 };

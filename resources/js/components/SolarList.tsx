@@ -11,59 +11,23 @@ import {
     Box,
     Fade,
 } from "@mui/material";
+import styles from "../Utils/styles";
 
 const SolarList = () => {
-    const [hoveredId, setHoveredId] = useState<string | null>(null); // Fixed type declaration
+    const [hoveredId, setHoveredId] = useState(null);
 
     return (
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                width: "100%",
-                padding: 4,
-                marginBottom: "20px",
-            }}
-        >
+        <Box sx={styles.boxSx}>
             <Grid container spacing={3} sx={{ justifyContent: "center" }}>
                 {solarBranches.map((branch) => (
                     <Grid item xs={12} sm={6} md={4} key={branch.id}>
                         <Box
-                            id={branch.id} // Ensure each Box has a unique ID
-                            sx={{
-                                scrollMarginTop: "80px",
-                                backgroundColor: "#fff",
-                                borderRadius: "16px",
-                                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                                transition:
-                                    "transform 0.3s ease, box-shadow 0.3s ease, background 0.4s",
-                                "&:hover": {
-                                    transform: "scale(1.02)",
-                                    boxShadow: "0 12px 24px rgba(0, 0, 0, 0.2)",
-                                    background:
-                                        "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.95) 100%)",
-                                },
-                            }}
+                            id={branch.id}
+                            sx={styles.branchSx}
                             onMouseEnter={() => setHoveredId(branch.id)}
                             onMouseLeave={() => setHoveredId(null)}
                         >
-                            <Card
-                                sx={{
-                                    height: 550,
-                                    width: {
-                                        xs: 450,
-                                        sm: 550,
-                                        md: 800,
-                                        lg: 1250,
-                                        xl: 1250,
-                                    },
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    margin: "0 auto",
-                                }}
-                            >
+                            <Card sx={styles.cardSx}>
                                 <CardMedia
                                     component="img"
                                     height="400"
